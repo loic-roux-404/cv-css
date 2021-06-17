@@ -8,153 +8,18 @@
     <title>CV Emma Vassoile</title>
     <meta name="description" content="CV Emma Vassoile">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Roboto:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Roboto:wght@300;600&display=swap');
-
-html {
-    scroll-behavior: smooth;
-
-    --liens: #E59866;
-    --liens-avec-fond: #2E4053;;
-    --texte: #566573;
-    --texte-gras: #2E4053;
-    --text-boutton: #fafafa;
-    --titre: #273746;
-    --fond: #fafafa;
-    --fond-deco: #E67E22;
-    --ombre: 0px 14px 29px 1px rgba(158, 158, 158, 0.92);
-    --bords: #283747;
-}
-
-body{
-    color: var(--texte);
-    font-family: 'Roboto', sans-serif;
-    background: var(--fond);
-    font-weight: 300;
-    padding: 0;
-    margin: 0;
-}
-
-h1,h2,h3,h4,h6 { font-family: 'Heebo', sans-serif;
-    font-weight: 800;
-    color: var(--titre);
-}
-
-h1 {
-    font-size: 32pt;
-}
-
-strong {
-    font-weight: 600;
-    color: var(--texte-gras);
-}
-
-a {
-    color: var(--liens);
-    text-decoration: unset;
-    transition: color 0.5s;
-}
-
-a:hover {
-    text-decoration: dotted;
-}
-
-button,
-input,
-textarea {
-    transition: box-shadow 0.2s;
-}
-
-button,
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
-    background: var(--liens);
-  padding-right: 30px;
-  padding-left: 30px;
-  box-shadow: var(--ombre);
-}
-
-button:hover,
-input[type='submit']:hover,
-input[type='reset']:hover,
-input[type='button']:hover {
-  background: var(--button-hover);
-  box-shadow: var(--ombre);
-}
-
-/**
-    système de placement
-*/
-article {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-article > * {
-    width: attr('width');
-    padding: 12px;
-    max-width: 50%;
-}
-
-article > section[align=center] {
-    max-width: 65%;
-    align-self: center;
-    margin: auto;
-}
-
-article ul {
-    margin-top: 10px;
-}
-
-article > section[align="center"] ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header {
-    width: 100%;
-    height: 300px;
-    background: var(--fond-deco);
-}
-
-nav {
-    width: 100%;
-    min-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-nav > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    height: 100%;
-    text-align: center;
-}
-
-nav > ul > li {
-    display: inline;
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-nav > ul > li a {color: var(--liens-avec-fond); }
-
-footer {
-    border-top: 1px solid var(--bords);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: var(--text-muted);
-    background: var(--fond-deco);
-}
-  
-body>footer {
-    margin-top: 60px;
-}
-
+    <style>    
+        html {
+        --police-1: 'Roboto';
+        --police1-weight: 300;
+        --police-2: 'Heebo';
+        --police2-weight: 800;
+        --fond-deco: #F7DC6F;    
+    }
     </style>
 </head>
 
@@ -171,7 +36,7 @@ body>footer {
 
         <article>
             <section>
-                <img src="https://fakeimg.pl/250x250/" alt="profil">
+                <img src="./img/IMG_4092.jpg" alt="profil" width="250" height="250">
             </section>
             <section>
                 <h2>
@@ -281,7 +146,7 @@ body>footer {
         </section>
     </article>
 
-    <footer>
+    <footer id="contact">
         <nav>
             <ul>
                 <li><a href="tel:+0661794483">06.61.79.44.83</a></li>

@@ -1,0 +1,134 @@
+/* Css inspiré de water.css */
+
+html {
+    /* Permet d'avoir un défilement fluide lorsque l'on clique sur un lien 
+    interne qui va vers une section possèdant un ID */
+    scroll-behavior: smooth;
+    /* Variables css à réutiliser */
+    --liens: #85929E;
+    --liens-avec-fond:#2E4053;
+    --texte: #566573;
+    --texte-gras:#2E4053;
+    --text-boutton:#fafafa;
+    --titre:#273746;
+    --fond:#fafafa;
+    --fond-deco:#E67E22;
+    --ombre: 0px 14px 29px 1px rgba(158, 158, 158, 0.92);
+    --bords:#283747;
+    --police-1: Arial, sans-serif;
+    --police1-weight:300;
+    --police-2: sans-serif;
+    --police2-weight: 600;
+}
+
+body {
+    /* Couleur de tous le texte de la page */
+    color: var(--texte);
+    /* Police par défaut sur le texte */
+    font-family: var(--police-1);
+    background: var(--fond);
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+/* Thème des titre avec police et couleur différente */
+h1,h2,h3,h4,h6 { font-family: var(--police-2), sans-serif;
+    font-weight: 800;
+    color: var(--titre);
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+/* Personnalisation du texte en gras avec une epaisseur et couleurs de police différente */
+strong {
+    font-weight: 600;
+    color: var(--texte-gras);
+}
+
+a {
+    color: var(--liens);
+    /* On enlève la décoration par défaut */
+    text-decoration: unset;
+}
+
+a:hover {
+    text-decoration: dotted;
+}
+
+/**
+    système de placement
+*/
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tous les enfants de article ont 50% de taille */
+article > * {
+    padding: 12px;
+    max-width: 50%;
+}
+
+/* Une section centré n'est plus faites pour être à côté d"une autre section */
+article > section[align="center"] {
+    max-width: 65%;
+    align-self: center;
+    margin: auto;
+}
+
+/* Les liste était trop collé à la balise précédente */
+article ul {
+    margin-top: 10px;
+}
+
+/* Le rendu des listes avec un texte centré est mauvais */
+article > section[align="center"] ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    background: var(--fond-deco);
+}
+
+/* Ici on centre la barre de navigation */
+nav {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Liste des lien sans les css par défaut */
+nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 100%;
+    text-align: center;
+}
+
+/* Menu en ligne */
+nav > ul > li {
+    display: inline;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+nav > ul > li a {color: var(--liens-avec-fond); }
+
+/* Pied de page avec séparation */
+body>footer {
+    border-top: 1px solid var(--bords);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: var(--text-muted);
+    background: var(--fond-deco);
+    margin-top: 60px;
+}

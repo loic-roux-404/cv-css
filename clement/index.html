@@ -4,157 +4,23 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CV Emma Vassoile</title>
-    <meta name="description" content="CV Emma Vassoile">
+    <title>CV Clement chomarat</title>
+    <!-- Mobile dimension -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Polices en ligne -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perso.css">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Roboto:wght@300;600&display=swap');
-
-html {
-    scroll-behavior: smooth;
-
-    --liens: #E59866;
-    --liens-avec-fond: #2E4053;;
-    --texte: #566573;
-    --texte-gras: #2E4053;
-    --text-boutton: #fafafa;
-    --titre: #273746;
-    --fond: #fafafa;
-    --fond-deco: #E67E22;
-    --ombre: 0px 14px 29px 1px rgba(158, 158, 158, 0.92);
-    --bords: #283747;
-}
-
-body{
-    color: var(--texte);
-    font-family: 'Roboto', sans-serif;
-    background: var(--fond);
-    font-weight: 300;
-    padding: 0;
-    margin: 0;
-}
-
-h1,h2,h3,h4,h6 { font-family: 'Heebo', sans-serif;
-    font-weight: 800;
-    color: var(--titre);
-}
-
-h1 {
-    font-size: 32pt;
-}
-
-strong {
-    font-weight: 600;
-    color: var(--texte-gras);
-}
-
-a {
-    color: var(--liens);
-    text-decoration: unset;
-    transition: color 0.5s;
-}
-
-a:hover {
-    text-decoration: dotted;
-}
-
-button,
-input,
-textarea {
-    transition: box-shadow 0.2s;
-}
-
-button,
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
-    background: var(--liens);
-  padding-right: 30px;
-  padding-left: 30px;
-  box-shadow: var(--ombre);
-}
-
-button:hover,
-input[type='submit']:hover,
-input[type='reset']:hover,
-input[type='button']:hover {
-  background: var(--button-hover);
-  box-shadow: var(--ombre);
-}
-
-/**
-    système de placement
-*/
-article {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-article > * {
-    width: attr('width');
-    padding: 12px;
-    max-width: 50%;
-}
-
-article > section[align=center] {
-    max-width: 65%;
-    align-self: center;
-    margin: auto;
-}
-
-article ul {
-    margin-top: 10px;
-}
-
-article > section[align="center"] ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header {
-    width: 100%;
-    height: 300px;
-    background: var(--fond-deco);
-}
-
-nav {
-    width: 100%;
-    min-height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-nav > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    height: 100%;
-    text-align: center;
-}
-
-nav > ul > li {
-    display: inline;
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-nav > ul > li a {color: var(--liens-avec-fond); }
-
-footer {
-    border-top: 1px solid var(--bords);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: var(--text-muted);
-    background: var(--fond-deco);
-}
-  
-body>footer {
-    margin-top: 60px;
-}
-
+                html {
+        --police-1: 'Open Sans';
+        --police1-weight: 300;
+        --police-2: 'Lato';
+        --police2-weight: 900;
+        --fond-deco: #4e6ac4; 
+        --liens-avec-fond: white;   
+    }
     </style>
 </head>
 
@@ -162,26 +28,27 @@ body>footer {
     <header>
         <nav>
             <ul>
-                <li><a href="#formations">Formationsv</a></li>
+                <li><a href="#education">Formationsv</a></li>
                 <li><a href="#compétences">Compétences</a></li>
                 <li><a href="#expériences">Expériences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
-        <article>
-            <section>
-                <img src="https://fakeimg.pl/250x250/" alt="profil">
-            </section>
-            <section>
-                <h2>
-                    <q>Organisée, passionnée, rigoureuse. Force de proposition et esprit d'équipe</q>
-                </h2>
-            </section>
+        <div class="titreFlexg">
+            <h3>
+                Étudiant en Master 1 dans la spécialisation Marketing & Digital Business à l'ESDES Business School afin de développer de nouvelles compétences dans le marketing.
+            </h3>
+        </div>
+
     </header>
 
+    <div class="imgROnd imgHausse" align="center">
+        <img src="./img/pic.jpg" alt="clement" width="240" height="auto">
+    </div>
+
     <article id="bloc-1">
-        <section id=formations>
+        <section id=formations align="center">
             <h1>FORMATIONS</h1>
             <ul class="temps-ligne">
                 <li>
@@ -203,7 +70,7 @@ body>footer {
                 </li>
             </ul>
         </section>
-        <section id="compétences">
+        <section id="compétences" align="center">
             <h1>COMPÉTENCES</h1>
             <ul>
                 <li>Pack Office (Connaissance avancée Excel) Illustrator</li>
