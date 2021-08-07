@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  SWARMLET_USER: git
+  SWARMLET_HOST: loicroux.com
+  SWARMLET_APP_NAME: portfolio
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set environment
+        run: echo "BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+
+      - name: Set app name [staging]
+        if: env.BRANCH == 'develop'
+        run: echo "SWARMLET_APP_NAME=$SWARMLET_APP_NAME-staging" >> $GITHUB_ENV
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v1
+        with:
+          private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known-hosts: ${{ env.SWARMLET_HOST }}
+
+      - name: Deploy to swarm
+        run: |
+          cd $GITHUB_WORKSPACE
+          git fetch --unshallow
+          git remote add swarm $SWARMLET_USER@$SWARMLET_HOST:$SWARMLET_APP_NAME
+          GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+          git push -u swarm $BRANCH:master --force

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Loic Roux</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/perso.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&family=Lato:wght@300;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      --police-1: 'Poppins';
+      --police1-weight: 300;
+      --police-2: 'Lato';
+      --police2-weight: 900;
+      --liens-avec-fond: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#school">School</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#wip-and-done">Wip and done</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="titreFlexg">
+      <b>
+        Passionnated, organized and innovative
+        student in software and devOps technologies.
+      </b>
+    </div>
+
+  </header>
+
+  <div class="imgROnd imgHausse" align="center">
+    <img src="./img/profile-loic-roux.jpg" alt="Loic Roux profile picture" width="240" height="auto">
+  </div>
+
+  <article id="bloc-1">
+    <section id="school" align="center">
+      <h1>School</h1>
+      <ul class="temps-ligne">
+        <li>
+          <h2>ESGI Lyon</h2>
+          <p>
+            Software architectures grade
+          </p>
+          <small>2020-2021</small>
+          <small>
+            <ul>
+              <li>Java</li>
+              <li>Node</li>
+              <li>Python</li>
+              <li>Mathematics</li>
+              <li>Fundamental linux system administration and networking</li>
+            </ul>
+          </small>
+        </li>
+        <li>
+          <h4>Institut G4 Lyon</h4>
+          <p>IT project manager master degree first year (no validated)</p>
+          <small>2019-2020</small>
+          <small>
+            <ul>
+              <li>Agile methods</li>
+              <li>V cycle method</li>
+              <li>Nodejs</li>
+              <li>Php 7.4</li>
+              <li>Symfony 5</li>
+            </ul>
+          </small>
+        </li>
+        <li>
+          <h4>Associate’s Degree : Multimedia and digital jobs</h4>
+          <p>
+            360° communication components
+          </p>
+          <small>2016-2017</small>
+          <small>
+            <ul>
+              <li>Algorithmic</li>
+              <li>Maths</li>
+              <li>Networking</li>
+              <li>Oriented object programming</li>
+              <li>Web development</li>
+              <li>Graphic design</li>
+              <li>Communication</li>
+            </ul>
+          </small>
+        </li>
+      </ul>
+    </section>
+    <section id="skills" align="center">
+      <h1>Skills</h1>
+      <ul>
+        <li>Functionnal programming (go / vue)</li>
+        <li>Oriented object programming (Java / Php / Python)</li>
+        <li>Prototyped object programming (js)</li>
+        <li>Low level and compiled languages (C)</li>
+        <li>Shell scriting (Bash / powershell)</li>
+      </ul>
+      <h3>Others</h3>
+      <ul>
+        <li>
+          <h4>Youth work diploma</h4>
+          <small>Made some summer camps</small>
+        </li>
+        <li>
+          <h4>First-aid certification</h4>
+        </li>
+      </ul>
+    </section>
+  </article>
+  <hr>
+  <article>
+    <section id="wip-and-done" align="center">
+      <h1>Wip and done (professional missions)</h1>
+      <ul>
+        <li>
+          <h4>Full-stack developer</h4>
+          <small>September 2019 to August 2021</small>
+
+          <ul>
+            <li></li>
+            <li>Benchmark</li>
+            <li>
+              Engaged in an SOA architecture managing 4 applications.
+            </li>
+            <li>Working in an efficient Scrumban environment with Jira</li>
+            <li>Monitoring with sentry and Kibana</li>
+            <li>
+              Created and enhanced symfony bundles and npm libraries
+            </li>
+            <li>
+              Maintained ansible modules (roles) related to stack deployments
+            </li>
+          </ul>
+          <h4>Techno : </h4>
+          <p>Symfony 3 / node / webpack / vuejs 2.6 / Ansible</p>
+        </li>
+        <li>
+          <h4>Personnal project</h4>
+          <small>From march 2020</small>
+          <h4>Docker Swarm stack based on dokku PaaS open source project</h4>
+          <ul>
+            <li>Virtualization : Vm Images building with packer</li>
+            <li>Automation : Ansible to provision debian machine</li>
+            <li>Ci: validate and deploy with github actions</li>
+            <li>Services: traefik / letsencrypt and consul service discovery</li>
+            <li>Run: docker swarm orchestration</li>
+            <li>Monitoring : Prometheus metrics, alerting sorted with karma and dahboard with Grafana</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </article>
+
+  <footer id="contact">
+    <nav>
+      <ul>
+        <li>
+          <form action="https://formspree.io/f/mpzowezo" method="POST">
+            <input type="hidden" value="Conact asked">
+            <button type="submit">Ping me</butt>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>
