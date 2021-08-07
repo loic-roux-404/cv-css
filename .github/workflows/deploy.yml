@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - beta
 
 env:
   SWARMLET_USER: git
@@ -20,7 +21,7 @@ jobs:
         run: echo "BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
 
       - name: Set app name [staging]
-        if: env.BRANCH == 'develop'
+        if: env.BRANCH == 'beta'
         run: echo "SWARMLET_APP_NAME=$SWARMLET_APP_NAME-staging" >> $GITHUB_ENV
 
       - name: Install SSH key

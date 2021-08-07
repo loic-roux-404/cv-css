@@ -1,7 +1,7 @@
 /* Css inspiré de water.css */
 
 html {
-    /* Permet d'avoir un défilement fluide lorsque l'on clique sur un lien 
+    /* Permet d'avoir un défilement fluide lorsque l'on clique sur un lien
     interne qui va vers une section possèdant un ID */
     scroll-behavior: smooth;
     /* Variables css à réutiliser */
@@ -12,7 +12,7 @@ html {
     --text-boutton:#fafafa;
     --titre:#273746;
     --fond:#fafafa;
-    --fond-deco:#E67E22;
+    --fond-deco:#589b74;
     --ombre: 0px 14px 29px 1px rgba(158, 158, 158, 0.92);
     --bords:#283747;
     --police-1: Arial, sans-serif;
